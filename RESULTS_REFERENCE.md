@@ -3,7 +3,7 @@
 **Main goal:** Measure TCP/UDP loopback throughput and stability  
 **Tools:** Run iperf3 -s -1 then iperf3 -c 127.0.0.1 -J for each yaml protocol
 
-Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_148 · recorded 2026-11-19). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
+Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_149 · recorded 2026-11-19). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
 
 > Smoke runs use deliberately small sizes. They check that the workload installs and runs end to end; their numbers are not performance results. Baseline and extended are.
 
@@ -11,16 +11,16 @@ Reference results measured by the maintainer on the system shown in each section
 ## smoke
 
 - **System:** 1× AMD Instinct MI300X VF (196288 MB) · INTEL(R) XEON(R) PLATINUM 8568Y+ · Ubuntu 24.04.5 LTS · kernel 6.8.0-149-generic · driver 7.1.9.31600000
-- **Run:** 2026-11-19T14:27:57Z · status **PASS** (exit 0)
-- **Time (mm:ss):** setup 00:10 · benchmark 00:07 · whole run 00:27
-- **Source:** run 108_20261119_142757
+- **Run:** 2026-11-19T21:24:20Z · status **PASS** (exit 0)
+- **Time (mm:ss):** setup 00:10 · benchmark 00:06 · whole run 00:26
+- **Source:** run 108_20261119_212420
 - **Command:** `bash run_benchmark.sh --smoke --protocol tcp,udp --port 5201 --reverse-mode false --window-size 256K --buffer-length 128K --parallel-streams 1 --bandwidth-limit 0 --omit-initial-seconds 0 --time 2`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | TCP loopback throughput (tcp_loopback_gbps) | 51.1212338376438 |
-| 2 | UDP loopback throughput (udp_throughput_gbps) | 61.42519324765635 |
-| 3 | UDP jitter (udp_jitter_ms) | 0.0028093016266573984 |
-| 4 | Packet loss, percent (packet_loss_rate) | 0.0021303792074989347 |
+| 1 | TCP loopback throughput (tcp_loopback_gbps) | 54.0272458896697 |
+| 2 | UDP loopback throughput (udp_throughput_gbps) | 63.200167578658 |
+| 3 | UDP jitter (udp_jitter_ms) | 0.0030279187820559487 |
+| 4 | Packet loss, percent (packet_loss_rate) | 0.04015565490975327 |
 | 5 | TCP retransmit count per run (tcp_retransmit_count) | 0.0 |
 <!-- /profile:smoke -->
