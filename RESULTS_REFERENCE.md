@@ -11,16 +11,16 @@ Reference results from the validation run on the system shown in each section (r
 ## smoke
 
 - **System:** 1× AMD Instinct MI300X VF (196288 MB) · INTEL(R) XEON(R) PLATINUM 8568Y+ · Ubuntu 24.04.5 LTS · kernel 6.8.0-149-generic · driver 7.1.9.31600000
-- **Run:** 2026-11-22T10:53:31Z · status **PASS** (exit 0)
-- **Time (mm:ss):** setup 00:10 · benchmark 00:06 · whole run 00:25
-- **Source:** run 108_20261122_105331
+- **Run:** 2026-11-22T14:18:45Z · status **PASS** (exit 0)
+- **Time (mm:ss):** setup 00:10 · benchmark 00:12 · whole run 00:31
+- **Source:** run 108_20261122_141845
 - **Command:** `bash run_benchmark.sh --smoke --protocol tcp,udp --port 5201 --reverse-mode false --window-size 256K --buffer-length 128K --parallel-streams 1 --bandwidth-limit 0 --omit-initial-seconds 0 --time 2`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | TCP loopback throughput (tcp_loopback_gbps) | 56.5240295733658 |
-| 2 | UDP loopback throughput (udp_throughput_gbps) | 64.07748081775519 |
-| 3 | UDP jitter (udp_jitter_ms) | 0.002704843387373136 |
-| 4 | Packet loss, percent (packet_loss_rate) | 0.0698016164584864 |
+| 1 | TCP loopback throughput (tcp_loopback_gbps) | 56.84881500586354 |
+| 2 | UDP loopback throughput (udp_throughput_gbps) | 62.696303227475546 |
+| 3 | UDP jitter (udp_jitter_ms) | 0.003552321171872965 |
+| 4 | Packet loss, percent (packet_loss_rate) | 0.10342382918386922 |
 | 5 | TCP retransmit count per run (tcp_retransmit_count) | 0.0 |
 <!-- /profile:smoke -->
